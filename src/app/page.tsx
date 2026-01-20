@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* スタッフセクション */}
-      <section className="min-h-screen bg-gray-900 text-white py-200">
+      <section className="min-h-screen bg-gray-900 text-white py-20">
         <div className="max-w-6xl mx-auto px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-[#d4af37]">
             Stylist
@@ -119,6 +119,81 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2">佐藤 次郎</h3>
               <p className="text-gray-400 mb-2">スタイリスト</p>
               <p className="text-sm text-gray-500">経験年数：8年</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ギャラリーセクション */}
+      <section className="min-h-screen bg-black text-white py-20">
+        <div className="max-w-6xl mx-auto px-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-[#d4af37]">
+            Gallery
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="aspect-square bg-gray-700 rouded-lg"></div>
+            <div className="aspect-square bg-gray-700 rouded-lg"></div>
+            <div className="aspect-square bg-gray-700 rouded-lg"></div>
+            <div className="aspect-square bg-gray-700 rouded-lg"></div>
+            <div className="aspect-square bg-gray-700 rouded-lg"></div>
+            <div className="aspect-square bg-gray-700 rouded-lg"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* アクセスセクション */}
+      <section className="min-h-screen bg-gray-900 text-white py-20">
+        <div className="max-w-4xl mx-auto px-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-[#d4af37]">
+            Access
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* 地図 */}
+            <div className="aspect-video bg-gray-700 rounded-lg flex items-center justify-center">
+              <p className="text-gray-400">Google Map</p>
+            </div>
+
+            {/* 情報 */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-[#d4af37]">住所</h3>
+                <p className="text-gray-300">
+                  〒150-0001
+                  <br />
+                  東京都渋谷区神宮前1-2-3
+                  <br />
+                  サロンビル 2F
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-[#d4af37]">
+                  営業時間
+                </h3>
+                <p className="text-gray-300">
+                  平日：10:00 - 20:00
+                  <br />
+                  土日祝：10:00 - 19:00
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-[#d4af37]">
+                  定休日
+                </h3>
+                <p className="text-gray-300">
+                  毎週月曜日
+                  <br />
+                  第3火曜日
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-[#d4af37]">電話</h3>
+                <p className="text-gray-300">03-1234-5678</p>
+              </div>
             </div>
           </div>
         </div>
