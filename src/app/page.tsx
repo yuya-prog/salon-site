@@ -4,7 +4,7 @@ export default function Home() {
       {/* ヒーローセクション */}
       <section className="h-screen flex flex-col  justify-center relative">
         {/* 背景グラデーション */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 z-0"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-black/50 to-black/80 z-0"></div>
         {/* コンテンツ */}
         <div className="relative z-10 text-center px-4">
           <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-wider">
@@ -196,6 +196,99 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 予約フォーム */}
+      <section className="min-h-screen bg-black text-white py-20">
+        <div className="max-w-2xl mx-auto px-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-[#d4af37]">
+            Reservation
+          </h2>
+          <form className="space-y-6">
+            <div>
+              <label htmlFor="name" className="block mb-2 text-sm font-medium">
+                お名前<span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-[#d4af37] transition"
+                placeholder="山田 太郎"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block mb-2 text-sm font-medium">
+                メールアドレス<span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="email"
+                className="w-full px-4 py-3 bg-gray-900 rounded-lg border border-gray-700 focus:outline-none focus:border-[#d4af37] transition"
+                placeholder="example@email.com"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="date" className="block mb-2 text-sm font-medium">
+                希望日時<span className="text-red-500">*</span>
+              </label>
+              <input
+                type="datetime-local"
+                id="date"
+                className="w-full px-4 py-3 bg-gray-900 rounded-lg border border-gray-700 focus:outline-none focus:border-[#d4af37] transitiond"
+              />
+            </div>
+
+            {/* メニュー */}
+            <div>
+              <label htmlFor="menu" className="block mb-2 text-sm font-medium">
+                希望メニュー <span className="text-red-500">*</span>
+              </label>
+              <select
+                id="menu"
+                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-[#d4af37] transition appearance-none"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23d4af37' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
+                  backgroundPosition: "right 0.5rem center",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "1.5em 1.5em",
+                  paddingRight: "2.5rem",
+                }}
+              >
+                <option value="">選択してください</option>
+                <option value="cut">カット - ¥5,000</option>
+                <option value="color">カラー - ¥8,000</option>
+                <option value="perm">パーマ - ¥10,000</option>
+                <option value="treatment">トリートメント - ¥3,000</option>
+              </select>
+            </div>
+
+            {/* メッセージ */}
+            <div>
+              <label
+                htmlFor="message"
+                className="block mb-2 text-sm font-medium"
+              >
+                ご要望・ご質問
+              </label>
+              <textarea
+                id="message"
+                rows={5}
+                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-[#d4af37] transition resize-none"
+                placeholder="ご要望やご質問がございましたらご記入ください"
+              ></textarea>
+            </div>
+
+            {/* 送信ボタン */}
+            <button
+              type="submit"
+              className="w-full py-4 bg-[#d4af37] text-black font-bold text-lg rounded-lg hover:bg-[#f0c14b] transition"
+            >
+              予約する
+            </button>
+          </form>
         </div>
       </section>
     </main>
